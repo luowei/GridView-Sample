@@ -1,0 +1,570 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EAFDF22E1BE8954B00E14EF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFDF22D1BE8954B00E14EF7 /* main.m */; };
+		EAFDF2311BE8954B00E14EF7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFDF2301BE8954B00E14EF7 /* AppDelegate.m */; };
+		EAFDF2341BE8954B00E14EF7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFDF2331BE8954B00E14EF7 /* ViewController.m */; };
+		EAFDF2371BE8954B00E14EF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFDF2351BE8954B00E14EF7 /* Main.storyboard */; };
+		EAFDF2391BE8954B00E14EF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAFDF2381BE8954B00E14EF7 /* Assets.xcassets */; };
+		EAFDF23C1BE8954B00E14EF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFDF23A1BE8954B00E14EF7 /* LaunchScreen.storyboard */; };
+		EAFDF2471BE8954C00E14EF7 /* GridView_SampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFDF2461BE8954C00E14EF7 /* GridView_SampleTests.m */; };
+		EAFDF2521BE8954C00E14EF7 /* GridView_SampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFDF2511BE8954C00E14EF7 /* GridView_SampleUITests.m */; };
+		EAFDF26A1BE8958700E14EF7 /* LWPullDownControl.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFDF2611BE8958700E14EF7 /* LWPullDownControl.m */; };
+		EAFDF2811BE89C5000E14EF7 /* LWGridScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFDF27C1BE89C5000E14EF7 /* LWGridScrollView.m */; };
+		EAFDF2821BE89C5000E14EF7 /* LWGridScrollViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFDF27E1BE89C5000E14EF7 /* LWGridScrollViewLayout.m */; };
+		EAFDF2831BE89C5000E14EF7 /* LWGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFDF2801BE89C5000E14EF7 /* LWGridViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EAFDF2431BE8954B00E14EF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAFDF2211BE8954B00E14EF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAFDF2281BE8954B00E14EF7;
+			remoteInfo = "GridView-Sample";
+		};
+		EAFDF24E1BE8954C00E14EF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAFDF2211BE8954B00E14EF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAFDF2281BE8954B00E14EF7;
+			remoteInfo = "GridView-Sample";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EAFDF2291BE8954B00E14EF7 /* GridView-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GridView-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAFDF22D1BE8954B00E14EF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EAFDF22F1BE8954B00E14EF7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EAFDF2301BE8954B00E14EF7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EAFDF2321BE8954B00E14EF7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EAFDF2331BE8954B00E14EF7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EAFDF2361BE8954B00E14EF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EAFDF2381BE8954B00E14EF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EAFDF23B1BE8954B00E14EF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EAFDF23D1BE8954B00E14EF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAFDF2421BE8954B00E14EF7 /* GridView-SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GridView-SampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAFDF2461BE8954C00E14EF7 /* GridView_SampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GridView_SampleTests.m; sourceTree = "<group>"; };
+		EAFDF2481BE8954C00E14EF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAFDF24D1BE8954C00E14EF7 /* GridView-SampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GridView-SampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAFDF2511BE8954C00E14EF7 /* GridView_SampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GridView_SampleUITests.m; sourceTree = "<group>"; };
+		EAFDF2531BE8954C00E14EF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAFDF2601BE8958700E14EF7 /* LWPullDownControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWPullDownControl.h; sourceTree = "<group>"; };
+		EAFDF2611BE8958700E14EF7 /* LWPullDownControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWPullDownControl.m; sourceTree = "<group>"; };
+		EAFDF27A1BE89C5000E14EF7 /* LWGridDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWGridDefines.h; sourceTree = "<group>"; };
+		EAFDF27B1BE89C5000E14EF7 /* LWGridScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWGridScrollView.h; sourceTree = "<group>"; };
+		EAFDF27C1BE89C5000E14EF7 /* LWGridScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWGridScrollView.m; sourceTree = "<group>"; };
+		EAFDF27D1BE89C5000E14EF7 /* LWGridScrollViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWGridScrollViewLayout.h; sourceTree = "<group>"; };
+		EAFDF27E1BE89C5000E14EF7 /* LWGridScrollViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWGridScrollViewLayout.m; sourceTree = "<group>"; };
+		EAFDF27F1BE89C5000E14EF7 /* LWGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWGridViewCell.h; sourceTree = "<group>"; };
+		EAFDF2801BE89C5000E14EF7 /* LWGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWGridViewCell.m; sourceTree = "<group>"; };
+		EAFDF2841BE8A0B700E14EF7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EAFDF2261BE8954B00E14EF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAFDF23F1BE8954B00E14EF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAFDF24A1BE8954C00E14EF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EAFDF2201BE8954B00E14EF7 = {
+			isa = PBXGroup;
+			children = (
+				EAFDF22B1BE8954B00E14EF7 /* GridView-Sample */,
+				EAFDF2451BE8954B00E14EF7 /* GridView-SampleTests */,
+				EAFDF2501BE8954C00E14EF7 /* GridView-SampleUITests */,
+				EAFDF22A1BE8954B00E14EF7 /* Products */,
+				EAFDF2841BE8A0B700E14EF7 /* README.md */,
+			);
+			sourceTree = "<group>";
+		};
+		EAFDF22A1BE8954B00E14EF7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EAFDF2291BE8954B00E14EF7 /* GridView-Sample.app */,
+				EAFDF2421BE8954B00E14EF7 /* GridView-SampleTests.xctest */,
+				EAFDF24D1BE8954C00E14EF7 /* GridView-SampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EAFDF22B1BE8954B00E14EF7 /* GridView-Sample */ = {
+			isa = PBXGroup;
+			children = (
+				EAFDF2791BE89C5000E14EF7 /* GridView */,
+				EAFDF25F1BE8958700E14EF7 /* PullDownSearch */,
+				EAFDF22F1BE8954B00E14EF7 /* AppDelegate.h */,
+				EAFDF2301BE8954B00E14EF7 /* AppDelegate.m */,
+				EAFDF2321BE8954B00E14EF7 /* ViewController.h */,
+				EAFDF2331BE8954B00E14EF7 /* ViewController.m */,
+				EAFDF2351BE8954B00E14EF7 /* Main.storyboard */,
+				EAFDF2381BE8954B00E14EF7 /* Assets.xcassets */,
+				EAFDF23A1BE8954B00E14EF7 /* LaunchScreen.storyboard */,
+				EAFDF23D1BE8954B00E14EF7 /* Info.plist */,
+				EAFDF22C1BE8954B00E14EF7 /* Supporting Files */,
+			);
+			path = "GridView-Sample";
+			sourceTree = "<group>";
+		};
+		EAFDF22C1BE8954B00E14EF7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EAFDF22D1BE8954B00E14EF7 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EAFDF2451BE8954B00E14EF7 /* GridView-SampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				EAFDF2461BE8954C00E14EF7 /* GridView_SampleTests.m */,
+				EAFDF2481BE8954C00E14EF7 /* Info.plist */,
+			);
+			path = "GridView-SampleTests";
+			sourceTree = "<group>";
+		};
+		EAFDF2501BE8954C00E14EF7 /* GridView-SampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EAFDF2511BE8954C00E14EF7 /* GridView_SampleUITests.m */,
+				EAFDF2531BE8954C00E14EF7 /* Info.plist */,
+			);
+			path = "GridView-SampleUITests";
+			sourceTree = "<group>";
+		};
+		EAFDF25F1BE8958700E14EF7 /* PullDownSearch */ = {
+			isa = PBXGroup;
+			children = (
+				EAFDF2601BE8958700E14EF7 /* LWPullDownControl.h */,
+				EAFDF2611BE8958700E14EF7 /* LWPullDownControl.m */,
+			);
+			path = PullDownSearch;
+			sourceTree = "<group>";
+		};
+		EAFDF2791BE89C5000E14EF7 /* GridView */ = {
+			isa = PBXGroup;
+			children = (
+				EAFDF27A1BE89C5000E14EF7 /* LWGridDefines.h */,
+				EAFDF27B1BE89C5000E14EF7 /* LWGridScrollView.h */,
+				EAFDF27C1BE89C5000E14EF7 /* LWGridScrollView.m */,
+				EAFDF27D1BE89C5000E14EF7 /* LWGridScrollViewLayout.h */,
+				EAFDF27E1BE89C5000E14EF7 /* LWGridScrollViewLayout.m */,
+				EAFDF27F1BE89C5000E14EF7 /* LWGridViewCell.h */,
+				EAFDF2801BE89C5000E14EF7 /* LWGridViewCell.m */,
+			);
+			path = GridView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EAFDF2281BE8954B00E14EF7 /* GridView-Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAFDF2561BE8954C00E14EF7 /* Build configuration list for PBXNativeTarget "GridView-Sample" */;
+			buildPhases = (
+				EAFDF2251BE8954B00E14EF7 /* Sources */,
+				EAFDF2261BE8954B00E14EF7 /* Frameworks */,
+				EAFDF2271BE8954B00E14EF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GridView-Sample";
+			productName = "GridView-Sample";
+			productReference = EAFDF2291BE8954B00E14EF7 /* GridView-Sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EAFDF2411BE8954B00E14EF7 /* GridView-SampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAFDF2591BE8954C00E14EF7 /* Build configuration list for PBXNativeTarget "GridView-SampleTests" */;
+			buildPhases = (
+				EAFDF23E1BE8954B00E14EF7 /* Sources */,
+				EAFDF23F1BE8954B00E14EF7 /* Frameworks */,
+				EAFDF2401BE8954B00E14EF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EAFDF2441BE8954B00E14EF7 /* PBXTargetDependency */,
+			);
+			name = "GridView-SampleTests";
+			productName = "GridView-SampleTests";
+			productReference = EAFDF2421BE8954B00E14EF7 /* GridView-SampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EAFDF24C1BE8954C00E14EF7 /* GridView-SampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAFDF25C1BE8954C00E14EF7 /* Build configuration list for PBXNativeTarget "GridView-SampleUITests" */;
+			buildPhases = (
+				EAFDF2491BE8954C00E14EF7 /* Sources */,
+				EAFDF24A1BE8954C00E14EF7 /* Frameworks */,
+				EAFDF24B1BE8954C00E14EF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EAFDF24F1BE8954C00E14EF7 /* PBXTargetDependency */,
+			);
+			name = "GridView-SampleUITests";
+			productName = "GridView-SampleUITests";
+			productReference = EAFDF24D1BE8954C00E14EF7 /* GridView-SampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EAFDF2211BE8954B00E14EF7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = wodedata;
+				TargetAttributes = {
+					EAFDF2281BE8954B00E14EF7 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					EAFDF2411BE8954B00E14EF7 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = EAFDF2281BE8954B00E14EF7;
+					};
+					EAFDF24C1BE8954C00E14EF7 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = EAFDF2281BE8954B00E14EF7;
+					};
+				};
+			};
+			buildConfigurationList = EAFDF2241BE8954B00E14EF7 /* Build configuration list for PBXProject "GridView-Sample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EAFDF2201BE8954B00E14EF7;
+			productRefGroup = EAFDF22A1BE8954B00E14EF7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EAFDF2281BE8954B00E14EF7 /* GridView-Sample */,
+				EAFDF2411BE8954B00E14EF7 /* GridView-SampleTests */,
+				EAFDF24C1BE8954C00E14EF7 /* GridView-SampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EAFDF2271BE8954B00E14EF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAFDF23C1BE8954B00E14EF7 /* LaunchScreen.storyboard in Resources */,
+				EAFDF2391BE8954B00E14EF7 /* Assets.xcassets in Resources */,
+				EAFDF2371BE8954B00E14EF7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAFDF2401BE8954B00E14EF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAFDF24B1BE8954C00E14EF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EAFDF2251BE8954B00E14EF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAFDF2831BE89C5000E14EF7 /* LWGridViewCell.m in Sources */,
+				EAFDF2821BE89C5000E14EF7 /* LWGridScrollViewLayout.m in Sources */,
+				EAFDF2811BE89C5000E14EF7 /* LWGridScrollView.m in Sources */,
+				EAFDF2341BE8954B00E14EF7 /* ViewController.m in Sources */,
+				EAFDF26A1BE8958700E14EF7 /* LWPullDownControl.m in Sources */,
+				EAFDF2311BE8954B00E14EF7 /* AppDelegate.m in Sources */,
+				EAFDF22E1BE8954B00E14EF7 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAFDF23E1BE8954B00E14EF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAFDF2471BE8954C00E14EF7 /* GridView_SampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAFDF2491BE8954C00E14EF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAFDF2521BE8954C00E14EF7 /* GridView_SampleUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EAFDF2441BE8954B00E14EF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAFDF2281BE8954B00E14EF7 /* GridView-Sample */;
+			targetProxy = EAFDF2431BE8954B00E14EF7 /* PBXContainerItemProxy */;
+		};
+		EAFDF24F1BE8954C00E14EF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAFDF2281BE8954B00E14EF7 /* GridView-Sample */;
+			targetProxy = EAFDF24E1BE8954C00E14EF7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EAFDF2351BE8954B00E14EF7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EAFDF2361BE8954B00E14EF7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EAFDF23A1BE8954B00E14EF7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EAFDF23B1BE8954B00E14EF7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EAFDF2541BE8954C00E14EF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EAFDF2551BE8954C00E14EF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EAFDF2571BE8954C00E14EF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "GridView-Sample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wodedata.GridView-Sample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EAFDF2581BE8954C00E14EF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "GridView-Sample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wodedata.GridView-Sample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EAFDF25A1BE8954C00E14EF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "GridView-SampleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wodedata.GridView-SampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GridView-Sample.app/GridView-Sample";
+			};
+			name = Debug;
+		};
+		EAFDF25B1BE8954C00E14EF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "GridView-SampleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wodedata.GridView-SampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GridView-Sample.app/GridView-Sample";
+			};
+			name = Release;
+		};
+		EAFDF25D1BE8954C00E14EF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "GridView-SampleUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wodedata.GridView-SampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "GridView-Sample";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		EAFDF25E1BE8954C00E14EF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "GridView-SampleUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wodedata.GridView-SampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "GridView-Sample";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EAFDF2241BE8954B00E14EF7 /* Build configuration list for PBXProject "GridView-Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAFDF2541BE8954C00E14EF7 /* Debug */,
+				EAFDF2551BE8954C00E14EF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAFDF2561BE8954C00E14EF7 /* Build configuration list for PBXNativeTarget "GridView-Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAFDF2571BE8954C00E14EF7 /* Debug */,
+				EAFDF2581BE8954C00E14EF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAFDF2591BE8954C00E14EF7 /* Build configuration list for PBXNativeTarget "GridView-SampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAFDF25A1BE8954C00E14EF7 /* Debug */,
+				EAFDF25B1BE8954C00E14EF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAFDF25C1BE8954C00E14EF7 /* Build configuration list for PBXNativeTarget "GridView-SampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAFDF25D1BE8954C00E14EF7 /* Debug */,
+				EAFDF25E1BE8954C00E14EF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EAFDF2211BE8954B00E14EF7 /* Project object */;
+}
