@@ -11,9 +11,9 @@
 #import "LWPullDownControl.h"
 #import "ViewController.h"
 
-@interface LWGridScrollView () <LWGridViewDataSource, LWGridViewDelegateFlowLayout, LWGridViewCellDelegate, UIGestureRecognizerDelegate>
+static const int MoveStepDistance = 8;
 
-@property(nonatomic, retain) NSMutableArray *dataArray;
+@interface LWGridScrollView () <LWGridViewDataSource, LWGridViewDelegateFlowLayout, LWGridViewCellDelegate, UIGestureRecognizerDelegate>
 
 @property(nonatomic, strong) LWPullDownControl *searchHeader;
 
@@ -254,6 +254,8 @@
 //更新scrollView的编辑状态
 - (void)updateEditingState:(BOOL)editing {
     self.editing = editing;
+
+    [self.collectionViewLayout invalidateLayout];
 }
 
 
@@ -380,15 +382,17 @@
     //向上拖到顶了
     if (_beingMovedPromptView.frame.origin.y <= contentOffsetY) {
         if (self.contentOffset.y > movedPromptSize.height / 2) {
-            contentOffsetY = self.contentOffset.y - movedPromptSize.height;
+//            contentOffsetY = self.contentOffset.y - movedPromptSize.height;
+            contentOffsetY = self.contentOffset.y - MoveStepDistance;
         } else {
             contentOffsetY = 0;
         }
 
         //向下拖到底了
-    } else if (_beingMovedPromptView.frame.origin.y >= self.frame.size.height + contentOffsetY - _beingMovedPromptView.frame.size.height) {
-        if (self.contentOffset.y + movedPromptSize.height < self.contentSize.height) {
-            contentOffsetY = self.contentOffset.y + movedPromptSize.height;
+    } else if (_beingMovedPromptView.frame.origin.y >= self.frame.size.height + contentOffsetY - movedPromptSize.height) {
+        if (self.contentOffset.y + self.frame.size.height < self.contentSize.height) {
+//            contentOffsetY = self.contentOffset.y + movedPromptSize.height;
+            contentOffsetY = self.contentOffset.y + MoveStepDistance;
             contentOffsetY = contentOffsetY > self.contentSize.height - self.frame.size.height ?
                     self.contentSize.height - self.frame.size.height : contentOffsetY;
 
@@ -397,52 +401,60 @@
         }
     }
 
+    //内容的高度比frame的高度还小,offset.y直接返回-20
+    if (self.contentSize.height <= self.frame.size.height) {
+        contentOffsetY = -20;
+    }
+
     //设置contentOffset及被移动的快照的位置
-    [self setContentOffset:CGPointMake(self.contentOffset.x, contentOffsetY) animated:YES];
-//    _beingMovedPromptView.center = CGPointMake(newPoint.x , newPoint.y);
-    [UIView animateWithDuration:0.05 animations:^{
-        if(newPoint.y < 0){
-            _beingMovedPromptView.center = CGPointMake(newPoint.x , 0);
-        }else if(newPoint.y > self.contentOffset.y + self.frame.size.height){
-            _beingMovedPromptView.center = CGPointMake(newPoint.x,self.contentOffset.y+self.frame.size.height);
-        }else{
-            _beingMovedPromptView.center = CGPointMake(newPoint.x , newPoint.y);
+    [UIView animateWithDuration:0.25 delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
+        [self setContentOffset:CGPointMake(self.contentOffset.x, contentOffsetY) animated:NO];
+        if (newPoint.y < 0) {
+            _beingMovedPromptView.center = CGPointMake(newPoint.x, 0);
+        } else if (newPoint.y > self.contentOffset.y + self.frame.size.height) {
+            _beingMovedPromptView.center = CGPointMake(newPoint.x, self.contentOffset.y + self.frame.size.height);
+        } else {
+            _beingMovedPromptView.center = CGPointMake(newPoint.x, newPoint.y);
         }
 
-    }];
+    }                completion:^(BOOL finished) {
+        if(finished){
 
-    //移动动画
-    NSIndexPath *sourceIndexPath = _movingItemIndexPath;
-    NSIndexPath *destinationIndexPath = [self indexPathForItemAtPoint:_beingMovedPromptView.center];
-    if ((destinationIndexPath != nil) && ![destinationIndexPath isEqual:sourceIndexPath]
-            && [self collectionView:self itemAtIndexPath:sourceIndexPath canMoveToIndexPath:destinationIndexPath]
-            && (![destinationIndexPath isEqual:_preDestinationIndexPath] || ![sourceIndexPath isEqual:_preMovingItemIndexPath])
-            ) {
+            //移动动画
+            NSIndexPath *sourceIndexPath = _movingItemIndexPath;
+            NSIndexPath *destinationIndexPath = [self indexPathForItemAtPoint:_beingMovedPromptView.center];
+            if ((destinationIndexPath != nil) && ![destinationIndexPath isEqual:sourceIndexPath]
+                    && [self collectionView:self itemAtIndexPath:sourceIndexPath canMoveToIndexPath:destinationIndexPath]
+                    && (![destinationIndexPath isEqual:_preDestinationIndexPath] || ![sourceIndexPath isEqual:_preMovingItemIndexPath])
+                    ) {
 
-        [self collectionView:self itemAtIndexPath:sourceIndexPath willMoveToIndexPath:destinationIndexPath];
+                [self collectionView:self itemAtIndexPath:sourceIndexPath willMoveToIndexPath:destinationIndexPath];
 
 
-        //更新movingItemIndexPath
-        _movingItemIndexPath = destinationIndexPath;
+                //更新movingItemIndexPath
+                _movingItemIndexPath = destinationIndexPath;
 
-        //批量移动cell动画
-        __weak typeof(self) weakSelf = self;
-        [self performBatchUpdates:^{
-            if (weakSelf) {
-                [weakSelf deleteItemsAtIndexPaths:@[sourceIndexPath]];
-                [weakSelf insertItemsAtIndexPaths:@[destinationIndexPath]];
-            }
-        }              completion:^(BOOL finished) {
-        }];
+                //批量移动cell动画
+                __weak typeof(self) weakSelf = self;
+                [self performBatchUpdates:^{
+                    if (weakSelf) {
+                        [weakSelf deleteItemsAtIndexPaths:@[sourceIndexPath]];
+                        [weakSelf insertItemsAtIndexPaths:@[destinationIndexPath]];
+                    }
+                }              completion:^(BOOL finished) {
+                }];
 
 //        [self.collectionViewLayout invalidateLayout];
 
-        //记住这次移动的index与目标index
-        _preMovingItemIndexPath = sourceIndexPath;
-        _preDestinationIndexPath = destinationIndexPath;
-        _movedSuceess = YES;
+                //记住这次移动的index与目标index
+                _preMovingItemIndexPath = sourceIndexPath;
+                _preDestinationIndexPath = destinationIndexPath;
+                _movedSuceess = YES;
 
-    }
+            }
+
+        }
+    }];
 
 }
 

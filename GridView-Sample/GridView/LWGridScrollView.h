@@ -16,6 +16,8 @@
 
 //@property (nonatomic,assign) BOOL editing;
 
+@property(nonatomic, retain) NSMutableArray *dataArray;
+
 @property(nonatomic, assign) BOOL editing;
 
 

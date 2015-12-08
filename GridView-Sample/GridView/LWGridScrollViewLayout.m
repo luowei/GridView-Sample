@@ -45,22 +45,35 @@
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect {
     NSArray *layoutAttributesForElementsInRect = [super layoutAttributesForElementsInRect:rect];
 
+    LWGridScrollView *gridView = (LWGridScrollView *) self.collectionView;
     for (UICollectionViewLayoutAttributes *layoutAttributes in layoutAttributesForElementsInRect) {
 
         if (layoutAttributes.representedElementCategory == UICollectionElementCategoryCell) {
-            layoutAttributes.hidden = [layoutAttributes.indexPath isEqual:((LWGridScrollView *)self.collectionView).movingItemIndexPath];
+            layoutAttributes.hidden = [layoutAttributes.indexPath isEqual:gridView.movingItemIndexPath];
+
+            //编辑状态下的添加按钮
+            if (layoutAttributes.indexPath.item == gridView.dataArray.count) {
+                layoutAttributes.hidden = gridView.editing;
+            }
         }
+
     }
     return layoutAttributesForElementsInRect;
 }
 
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
-    LWGridScrollView *gridView = (LWGridScrollView *)self.collectionView;
+    LWGridScrollView *gridView = (LWGridScrollView *) self.collectionView;
     UICollectionViewLayoutAttributes *layoutAttributes = [super layoutAttributesForItemAtIndexPath:indexPath];
     if (layoutAttributes.representedElementCategory == UICollectionElementCategoryCell) {
         layoutAttributes.hidden = [layoutAttributes.indexPath isEqual:gridView.movingItemIndexPath];
     }
+
+    //编辑状态下的添加按钮
+    if (layoutAttributes.indexPath.item == gridView.dataArray.count) {
+        layoutAttributes.hidden = gridView.editing;
+    }
     return layoutAttributes;
 }
+
 
 @end
